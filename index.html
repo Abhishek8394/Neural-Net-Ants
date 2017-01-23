@@ -1,0 +1,59 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+<head>
+<title>Project</title>
+<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="js/main.js"></script> -->
+<script type="text/javascript" src="js/main2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container" style="height:100%;">
+		<div class="center"><h4>Welcome</h4></div>
+		<!-- <div class="canvas-container">			 -->
+			<canvas width="640px" height="640px" id="bg-canvas" class="bg-canvas"></canvas>
+			<canvas width="640px" height="640px" id="main-canvas" class="main-canvas"></canvas>
+		<!-- </div> -->
+		<div class="pb-controls">
+			<div class="row">
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick = "start();">Begin Untrained!</button><br>
+					<button class="btn btn-success" onclick = "trainedstart();">Begin Trained</button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick = "pause();">Pause</button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick = "toggleGlow();">Toggle Glow</button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick = "toggleTrail();">Toggle Trail</button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick = "clearScreen('main-canvas');">Clear</button>
+					<button class="btn btn-success" onclick = "clearEachGen();">Clear Screen each gen</button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-success" onclick="toggleFast();">Fast/Slow</button><br>
+					<button class="btn btn-success" onclick="toggleGenetic();">Toggle Genetic Algo</button><br>
+					<button class="btn btn-success">Save</button>			<br>		
+					<strong>Current Best Holder (was best in prev gen):<br></strong><span id="bestholder"></span>
+				</div>
+			</div>
+			<div>
+				<h3><strong>Generation:</strong> <span id="gen">0</span>, Best: <span id="best"></span></h3><br>
+			</div>
+			<!-- <div>
+				<button onclick="incl(1)">l+</button>
+				<input type="text" id="ls">
+				<button onclick="incl(-1)">l-</button>
+				<button onclick="incr(1)">r+</button>
+				<input type="text" id="rs">
+				<button onclick="incr(-1)">r-</button>
+			</div> -->
+		</div>
+	</div>
+</body>
+</html>
