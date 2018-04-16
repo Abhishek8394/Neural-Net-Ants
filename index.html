@@ -10,50 +10,90 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="container" style="height:100%;">
-		<div class="center"><h4>Welcome</h4></div>
-		<!-- <div class="canvas-container">			 -->
-			<canvas width="640px" height="640px" id="bg-canvas" class="bg-canvas"></canvas>
-			<canvas width="640px" height="640px" id="main-canvas" class="main-canvas"></canvas>
-		<!-- </div> -->
-		<div class="pb-controls">
-			<div class="row">
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick = "start();">Begin Untrained!</button><br>
-					<button class="btn btn-success" onclick = "trainedstart();">Begin Trained</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick = "pause();">Pause</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick = "toggleGlow();">Toggle Glow</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick = "toggleTrail();">Toggle Trail</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick = "clearScreen('main-canvas');">Clear</button>
-					<button class="btn btn-success" onclick = "clearEachGen();">Clear Screen each gen</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-success" onclick="toggleFast();">Fast/Slow</button><br>
-					<button class="btn btn-success" onclick="toggleGenetic();">Toggle Genetic Algo</button><br>
-					<button class="btn btn-success">Save</button>			<br>		
-					<strong>Current Best Holder (was best in prev gen):<br></strong><span id="bestholder"></span>
+	<div class="" style="height:100%;">
+		<a href="https://github.com/Abhishek8394/Neural-Net-Ants"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+		<div class="center welcome-title"><h4>Neural Net Ants</h4></div>		
+		<div class="">
+			<div class="canvas-container">
+				<canvas width="640px" height="640px" id="bg-canvas" class="bg-canvas"></canvas>
+				<canvas width="640px" height="640px" id="main-canvas" class="main-canvas"></canvas>
+			</div>
+			<div class="">
+				<div class="pb-controls">
+					<h4><strong>Generation:</strong> <span id="gen">0</span>, Best: <span id="best"></span></h4><br>
+					<div class="btn-pair">
+						<div class="controls-group">
+							<div class="group-title">
+								Start fresh / pre-trained
+							</div>
+							<div class="group-body">
+								<button class="btn btn-primary" onclick = "start();">Begin Untrained!</button>
+								<button class="btn btn-primary" onclick = "trainedstart();">Begin Trained</button>							
+							</div>
+						</div>
+					</div>
+					<div class="btn-pair">
+						<div class="controls-group">
+							<div class="group-title">
+								Love what you see? Pause and click Save to keep the image!
+							</div>
+							<div class="group-body">
+								<button class="btn btn-warning" onclick = "pause();">Pause</button>
+								<button class="btn btn-warning" onclick = "clearScreen('main-canvas');">Clear</button>						
+								<button class="btn btn-warning">Save</button>
+							</div>
+						</div>
+					</div>
+					<div class="btn-pair">
+						<div class="controls-group">
+							<div class="group-title">
+								Spice things up, try pressing these buttons when ants are in action
+							</div>
+							<div class="group-body">
+								<button class="btn btn-success" onclick = "toggleTrail();">Toggle Trail</button>
+								<button class="btn btn-success" onclick = "toggleGlow();">Toggle Glow</button>
+							</div>
+						</div>						
+					</div>
+					<div class="btn-pair">
+						<div class="controls-group">
+							<div class="group-title">
+								Training too slow? Hate continuity? You'll love these buttons 
+							</div>
+							<div class="group-body">
+								<button class="btn btn-success" onclick = "clearEachGen();">Clear Screen each gen</button>
+								<button class="btn btn-success" onclick="toggleFast();">Fast/Slow</button>						
+							</div>
+						</div>	
+						
+					</div>
+					<div class="btn-pair">
+						<div class="controls-group">
+							<div class="group-title">
+								Love current generation? Click this and don't let it go!
+							</div>
+							<div class="group-body">
+								<button class="btn btn-success" onclick="toggleGenetic();">Toggle Genetic Algo</button>
+							</div>
+						</div>	
+					</div>					
+
+					<div class="stats">						
+						<h4><strong>Current Best Holder (was best in prev gen):<br></strong><span id="bestholder"></span></h4>
+					</div>
+					<!-- <div>
+						<button onclick="incl(1)">l+</button>
+						<input type="text" id="ls">
+						<button onclick="incl(-1)">l-</button>
+						<button onclick="incr(1)">r+</button>
+						<input type="text" id="rs">
+						<button onclick="incr(-1)">r-</button>
+					</div> -->
 				</div>
 			</div>
-			<div>
-				<h3><strong>Generation:</strong> <span id="gen">0</span>, Best: <span id="best"></span></h3><br>
-			</div>
-			<!-- <div>
-				<button onclick="incl(1)">l+</button>
-				<input type="text" id="ls">
-				<button onclick="incl(-1)">l-</button>
-				<button onclick="incr(1)">r+</button>
-				<input type="text" id="rs">
-				<button onclick="incr(-1)">r-</button>
-			</div> -->
 		</div>
+		<!-- <div class="canvas-container">			 -->
+		<!-- </div> -->
 	</div>
 </body>
 </html>
